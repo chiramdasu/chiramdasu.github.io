@@ -490,6 +490,25 @@ a.insp-book:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
 .advisory-note{font-size:14px; line-height:1.6; color:#cffafe; margin:16px 0 0; max-width:52ch}
 .advisory-note a{color:#fde68a; font-weight:600; text-decoration:underline; text-underline-offset:3px}
 .advisory-note a:hover{color:#fef3c7}
+
+/* ============ LEFT TABLE OF CONTENTS ============ */
+.toc{position:fixed; left:0; top:0; z-index:15; width:216px; height:100vh; height:100dvh; padding:96px 16px 24px 20px; overflow-y:auto; background:color-mix(in srgb, var(--bg) 90%, transparent); backdrop-filter:blur(10px); border-right:1px solid var(--line); display:none}
+.toc-title{font-size:11.5px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; color:var(--muted); margin:0 4px 12px}
+.toc a{display:block; position:relative; color:var(--ink-2); text-decoration:none; font-size:13.5px; font-weight:600; letter-spacing:.02em; padding:7px 10px 7px 14px; border-radius:8px; transition:color .2s ease, background .2s ease}
+.toc a::before{content:""; position:absolute; left:0; top:20%; bottom:20%; width:3px; border-radius:99px; background:var(--gold); transform:scaleY(0); transition:transform .25s ease}
+.toc a:hover{color:var(--teal); background:color-mix(in srgb, var(--teal) 8%, transparent)}
+.toc a.active{color:var(--teal); background:color-mix(in srgb, var(--teal) 10%, transparent)}
+.toc a.active::before{transform:scaleY(1)}
+#toc-toggle{display:none}
+@media(min-width:1280px){
+  body{padding-left:216px}
+  .toc{display:block}
+}
+@media(max-width:1279.98px){
+  #toc-toggle{display:inline-flex; align-items:center; gap:8px; position:fixed; left:16px; bottom:16px; z-index:61; border:1px solid var(--line); border-radius:99px; background:var(--ink); color:var(--bg); font:inherit; font-size:13px; font-weight:600; letter-spacing:.02em; padding:10px 16px; cursor:pointer; box-shadow:var(--shadow)}
+  .toc{display:block; width:min(272px,84vw); padding-top:26px; z-index:60; box-shadow:var(--shadow); transform:translateX(-106%); transition:transform .28s ease}
+  .toc.open{transform:none}
+}
 </style>
 </head>
 <body>
@@ -515,6 +534,24 @@ a.insp-book:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
     </nav>
   </div>
 </header>
+
+<!-- LEFT TABLE OF CONTENTS -->
+<button id="toc-toggle" type="button" aria-controls="toc" aria-expanded="false">&#9776; Contents</button>
+<nav class="toc" id="toc" aria-label="Table of contents">
+  <p class="toc-title">Contents</p>
+  <a href="#top">Overview</a>
+  <a href="#experience">Experience</a>
+  <a href="#results">Results</a>
+  <a href="#value">Value Delivered</a>
+  <a href="#expertise">Expertise</a>
+  <a href="#education">Education</a>
+  <a href="#books">Books</a>
+  <a href="#research">Research</a>
+  <a href="#reflection">Reflection</a>
+  <a href="#inspiration">Inspiration</a>
+  <a href="#family">Family</a>
+  <a href="#contact">Contact</a>
+</nav>
 
 <!-- HERO / BIO -->
 <div class="hero" id="top">
@@ -1680,6 +1717,38 @@ a.insp-book:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
     if(document.readyState === 'complete'){ defer(); }
     else { window.addEventListener('load', defer, { once: true }); }
   }catch(e){}
+})();
+</script>
+<script>
+(function(){
+  /* ---------- Left TOC: scrollspy + mobile toggle ---------- */
+  var toc = document.querySelector('.toc');
+  if(!toc) return;
+  var links = toc.querySelectorAll('a[href^="#"]');
+  function setActive(id){
+    links.forEach(function(a){
+      var on = a.getAttribute('href') === '#' + id;
+      a.classList.toggle('active', on);
+      if(on) a.setAttribute('aria-current', 'true'); else a.removeAttribute('aria-current');
+    });
+  }
+  if('IntersectionObserver' in window){
+    var obs = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){ if(en.isIntersecting) setActive(en.target.id); });
+    }, { rootMargin: '-38% 0px -55% 0px' });
+    links.forEach(function(a){
+      var t = document.querySelector(a.getAttribute('href'));
+      if(t) obs.observe(t);
+    });
+  }
+  var btn = document.getElementById('toc-toggle');
+  function setOpen(open){
+    toc.classList.toggle('open', open);
+    if(btn) btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+  if(btn) btn.addEventListener('click', function(){ setOpen(!toc.classList.contains('open')); });
+  links.forEach(function(a){ a.addEventListener('click', function(){ setOpen(false); }); });
+  document.addEventListener('keydown', function(ev){ if(ev.key === 'Escape') setOpen(false); });
 })();
 </script>
 </body>
