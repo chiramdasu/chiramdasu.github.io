@@ -3,14 +3,29 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sreekanth Chiramdasu — One-Slide Profile (Download)</title>
+<title>Sreekanth Chiramdasu — One-Slide Profile</title>
+<meta name="description" content="One-slide executive profile of Sreekanth Chiramdasu — Global Leader, Program Portfolios. View online or download as PowerPoint or PDF.">
 <style>
-  body { margin:0; font-family: Calibri, Arial, sans-serif; background:#10243e; color:#fff; text-align:center; }
-  .wrap { max-width:640px; margin:0 auto; padding:64px 16px; }
-  h1 { font-family: Georgia, serif; font-size:26px; margin:0 0 10px; }
-  p { color:#c9d6e4; margin:0 0 28px; }
-  a.btn { display:inline-block; margin:6px; padding:12px 22px; border-radius:8px; background:#146b7e; color:#fff; text-decoration:none; font-weight:bold; }
+  * { box-sizing: border-box; }
+  body { margin:0; font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; background:#04263b; color:#ecfeff; min-height:100vh; display:flex; flex-direction:column; }
+  .bar { display:flex; flex-wrap:wrap; align-items:center; gap:10px 14px; padding:18px clamp(14px,4vw,40px); }
+  .bar h1 { font-family: Georgia, serif; font-size:clamp(20px,2.4vw,28px); margin:0; font-weight:700; }
+  .bar .sp { flex:1; }
+  a.btn { display:inline-block; padding:11px 20px; border-radius:999px; background:#d98a16; color:#fff; text-decoration:none; font-weight:700; font-size:14.5px; border:1px solid transparent; }
   a.btn.alt { background:transparent; border:1px solid #7fd1e8; color:#7fd1e8; }
+  a.btn:hover { filter:brightness(1.1); }
+  main { flex:1; display:flex; flex-direction:column; align-items:center; justify-content:center; padding:6px clamp(10px,3vw,36px) 30px; }
+  figure.slide { margin:0; width:min(1320px,96vw); }
+  figure.slide img { display:block; width:100%; height:auto; border-radius:10px; box-shadow:0 24px 70px rgba(0,0,0,.55), 0 0 0 1px rgba(165,243,252,.25); background:#0a2f47; }
+  figcaption { text-align:center; color:#a5e3ec; font-size:13.5px; margin-top:14px; }
+  @media print {
+    body { background:#fff; }
+    .bar a.btn, .bar .sp { display:none; }
+    .bar h1 { color:#04263b; }
+    figure.slide { width:100%; }
+    figure.slide img { box-shadow:none; }
+    figcaption { color:#357185; }
+  }
 </style>
 <style id="fluid-type-style">
 body{font-size:clamp(15px,.5vw + 12px,19px)}
@@ -20,14 +35,18 @@ h3{font-size:clamp(17px,1.6vw,22px)}
 </style>
 </head>
 <body>
-<div class="wrap">
+<header class="bar">
   <h1>One-Slide Profile</h1>
-  <p>Sreekanth Chiramdasu — Senior Leader, Global Initiatives. Download the slide:</p>
-  <a class="btn" href="Sreekanth_Chiramdasu_One_Slide_Profile.pptx" download>Download PowerPoint</a>
-  <a class="btn" href="one-slide.pdf" download>Download PDF</a>
-  <br>
+  <span class="sp"></span>
+  <a class="btn" href="Sreekanth_Chiramdasu_One_Slide_Profile.pptx" download>Download PowerPoint ↓</a>
+  <a class="btn" href="one-slide.pdf" download>Download PDF ↓</a>
   <a class="btn alt" href="index.html">Back to profile</a>
-  <a class="btn alt" href="resume.pdf">Resume (PDF)</a>
-</div>
+</header>
+<main>
+  <figure class="slide">
+    <img src="one-slide.png" width="1467" height="825" alt="One-slide profile of Sreekanth Chiramdasu — Global Leader, Program Portfolios: 20+ years of enterprise program delivery across the SDLC, $100M in global portfolios led, 150+ team members across vendors and delivery centers, 700 hours of internal quality audits and QMS engagements, with PMP, PMI-ACP, CSM and SAFe RTE credentials.">
+    <figcaption>Sreekanth Chiramdasu — Senior Leader, Global Initiatives · One-slide profile · Download it above as PowerPoint or PDF</figcaption>
+  </figure>
+</main>
 </body>
 </html>
