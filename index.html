@@ -578,6 +578,33 @@ a.insp-book:focus-visible{outline:2px solid var(--gold); outline-offset:3px}
 @media (prefers-reduced-motion: reduce){.dyn-bg *{animation:none!important}}
 
 </style>
+<style id="layout-fix-style">
+/* ===== Fixed-size screens, even grids, fluid type (per Sreekanth's direction) ===== */
+/* Every screen is one fixed full-height screen; content is vertically centered.
+   Taller content (e.g. Experience) simply extends its screen. */
+#top,#experience,#results,#value,#expertise,#education,#books,#research,#reflection,#inspiration,#family,#contact{min-height:100vh;display:flex;flex-direction:column;justify-content:center}
+/* Even grids: three blocks sit side by side in one row — never 2 over 1.
+   Below desktop width they stack in a single even column instead. */
+.res-grid{grid-template-columns:repeat(3,1fr)}
+.edu-grid{grid-template-columns:repeat(3,1fr)}
+@media(max-width:1020px){.res-grid,.edu-grid{grid-template-columns:1fr}}
+/* Fluid type: font sizes scale smoothly with the screen resolution on every screen. */
+body{font-size:clamp(15px,.5vw + 12px,19px)}
+.sec-sub{font-size:clamp(14.5px,.55vw + 10.5px,19px)}
+.tagline{font-size:clamp(13px,.5vw + 9px,17px)}
+.hero p.narr{font-size:clamp(15px,.55vw + 11px,19.5px)}
+.btn{font-size:clamp(13.5px,.35vw + 10.5px,16.5px)}
+.exp-legend{font-size:clamp(13px,.4vw + 9.5px,16px)}
+.exp-map-note{font-size:clamp(13px,.4vw + 9.5px,15.5px)}
+@media(min-width:761px){
+  h2.sec{font-size:clamp(27px,2.6vw,38px)}
+  .stat strong{font-size:clamp(24px,1.6vw + 12px,36px)}
+  .stat span{font-size:clamp(12px,.4vw + 8.5px,15px)}
+  .res-card h3,.insp-card h3,.edu-card h3,.v-card h3,.r-card h3,.book-card h3{font-size:clamp(16.5px,.6vw + 11px,21px)}
+  .res-card p,.insp-card p,.edu-card p,.v-card p,.r-card p,.book-card p{font-size:clamp(13.5px,.45vw + 10.5px,16.5px);line-height:1.62}
+}
+
+</style>
 </head>
 <body>
 
