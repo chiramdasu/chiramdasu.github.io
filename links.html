@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sreekanth Chiramdasu — Links</title>
+<meta name="description" content="All of Sreekanth Chiramdasu's links in one place: book a meeting, LinkedIn, executive profile, resume, books, and contact.">
+<meta property="og:title" content="Sreekanth Chiramdasu — Links">
+<meta property="og:description" content="Senior Leadership: Global Portfolios - R&D, QMS, Agile. Book a meeting, view my profile and resume, and find my books.">
+<meta property="og:image" content="https://chiramdasu.github.io/profile.jpg">
+<meta property="og:url" content="https://chiramdasu.github.io/links.html">
+<link rel="icon" href="profile.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    color: #ecfeff;
+    min-height: 100vh;
+    background:
+      radial-gradient(600px 400px at 15% -5%, rgba(8,145,178,.45), transparent 60%),
+      radial-gradient(700px 500px at 90% 10%, rgba(251,191,36,.14), transparent 55%),
+      radial-gradient(800px 600px at 50% 110%, rgba(8,145,178,.30), transparent 60%),
+      linear-gradient(165deg, #063a5e 0%, #042a47 55%, #032238 100%);
+    background-attachment: fixed;
+    padding: 40px 18px 34px;
+  }
+  .wrap { max-width: 480px; margin: 0 auto; }
+  header { text-align: center; margin-bottom: 26px; animation: rise .5s ease both; }
+  .avatar {
+    width: 112px; height: 112px; border-radius: 50%; object-fit: cover;
+    border: 3px solid #fbbf24;
+    box-shadow: 0 0 0 5px rgba(251,191,36,.18), 0 14px 34px rgba(0,0,0,.45);
+  }
+  h1 { font-size: 26px; font-weight: 800; letter-spacing: -.02em; margin-top: 16px; }
+  .tagline { color: #fbbf24; font-weight: 600; font-size: 14.5px; margin-top: 6px; }
+  .role { color: rgba(207,250,254,.78); font-size: 13.5px; margin-top: 5px; line-height: 1.45; }
+  .links { display: flex; flex-direction: column; gap: 12px; }
+  a.btn, .btn-static {
+    display: flex; align-items: center; gap: 14px;
+    padding: 13px 16px; border-radius: 16px; text-decoration: none;
+    background: rgba(8,145,178,.13);
+    border: 1px solid rgba(103,232,249,.28);
+    color: #ecfeff;
+    backdrop-filter: blur(6px);
+    transition: transform .18s ease, border-color .18s ease, background .18s ease, box-shadow .18s ease;
+    animation: rise .5s ease both;
+  }
+  a.btn:hover, a.btn:focus-visible {
+    transform: translateY(-2px);
+    border-color: rgba(103,232,249,.65);
+    background: rgba(8,145,178,.22);
+    box-shadow: 0 10px 26px rgba(0,0,0,.35);
+    outline: none;
+  }
+  .disc {
+    flex: 0 0 42px; width: 42px; height: 42px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    background: rgba(103,232,249,.16); color: #a5f3fc;
+  }
+  .disc svg { width: 21px; height: 21px; }
+  .disc .in-badge { font-weight: 800; font-size: 16px; letter-spacing: -.03em; color: #a5f3fc; }
+  .txt { flex: 1; min-width: 0; }
+  .label { display: block; font-weight: 600; font-size: 15.5px; line-height: 1.3; }
+  .sub { display: block; font-size: 12.5px; color: rgba(207,250,254,.72); margin-top: 1px; line-height: 1.35; }
+  .chev { color: rgba(165,243,252,.55); font-size: 18px; flex: 0 0 auto; }
+  a.btn.featured {
+    background: linear-gradient(135deg, #fbbf24, #f59e0b);
+    border-color: rgba(251,191,36,.9); color: #063a5e;
+    box-shadow: 0 12px 30px rgba(245,158,11,.35);
+  }
+  a.btn.featured:hover { background: linear-gradient(135deg, #fcd34d, #fbbf24); border-color: #fde68a; }
+  a.btn.featured .disc { background: rgba(6,58,94,.16); color: #063a5e; }
+  a.btn.featured .sub { color: rgba(6,58,94,.75); }
+  a.btn.featured .chev { color: rgba(6,58,94,.55); }
+  .btn-static { border-style: dashed; background: rgba(8,145,178,.06); color: rgba(236,254,255,.75); }
+  .btn-static .disc { background: rgba(103,232,249,.08); color: rgba(165,243,252,.6); }
+  .btn-static .sub { color: rgba(207,250,254,.5); }
+  .badge {
+    flex: 0 0 auto; font-size: 10.5px; font-weight: 700; letter-spacing: .06em;
+    color: #fbbf24; border: 1px solid rgba(251,191,36,.55); border-radius: 999px; padding: 3px 9px;
+  }
+  footer { text-align: center; margin-top: 28px; color: rgba(207,250,254,.55); font-size: 12.5px; line-height: 1.6; animation: rise .5s ease both; }
+  footer a { color: rgba(165,243,252,.8); text-decoration: none; }
+  footer a:hover { text-decoration: underline; }
+  @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  .links > *:nth-child(1) { animation-delay: .05s; } .links > *:nth-child(2) { animation-delay: .10s; }
+  .links > *:nth-child(3) { animation-delay: .15s; } .links > *:nth-child(4) { animation-delay: .20s; }
+  .links > *:nth-child(5) { animation-delay: .25s; } .links > *:nth-child(6) { animation-delay: .30s; }
+  .links > *:nth-child(7) { animation-delay: .35s; } .links > *:nth-child(8) { animation-delay: .40s; }
+  .links > *:nth-child(9) { animation-delay: .45s; } .links > *:nth-child(10) { animation-delay: .50s; }
+  .links > *:nth-child(11) { animation-delay: .55s; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+</style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <img class="avatar" src="profile.jpg" alt="Sreekanth Chiramdasu">
+      <h1>Sreekanth Chiramdasu</h1>
+      <p class="tagline">Senior Leadership: Global Portfolios - R&amp;D, QMS, Agile</p>
+      <p class="role">Senior Program Manager | Scrum Master | Release Train Engineer<br>DBA Candidate, National Louis University · Atlanta, GA</p>
+    </header>
+
+    <nav class="links" aria-label="Sreekanth Chiramdasu links">
+      <a class="btn featured" href="https://meet.google.com/uvt-zpcm-enf" target="_blank" rel="noopener">
+        <span class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></span>
+        <span class="txt"><span class="label">Book a Meeting</span><span class="sub">Google Meet · uvt-zpcm-enf</span></span>
+        <span class="chev" aria-hidden="true">›</span>
+      </a>
+
+      <a class="btn" href="https://www.linkedin.com/in/chiramdasu" target="_blank" rel="noopener">
+        <span class="disc"><span class="in-badge">in</span></span>
+        <span class="txt"><span class="label">LinkedIn</span><span class="sub">Connect with me · /in/chiramdasu</span></span>
+        <span class="chev" aria-hidden="true">›</span>
+      </a>
+
+      <a class="btn" href="https://chiramdasu.github.io/">
+        <span class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></span>
+        <span class="txt"><span class="label">Executive Profile</span><span class="sub">Full bio, experience map, research &amp; family</span></span>
+        <span class="chev" aria-hidden="true">›</span>
+      </a>
+
+      <a class="btn" href="https://chiramdasu.github.io/resume.pdf" target="_blank" rel="noopener">
+        <span class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></span>
+        <span class="txt"><span class="label">Resume</span><span class="sub">Download my resume (PDF)</span></span>
+        <span class="chev" aria-hidden="true">›</span>
+      </a>
+
+      <a class="btn" href="https://chiramdasu.github.io/one-slide.html">
+        <span class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></span>
+        <span class="txt"><span class="label">One-Slide Profile</span><span class="sub">The one-page summary · PPT &amp; PDF</span></span>
+        <span class="chev" aria-hidden="true">›</span>
+      </a>
+
+      <a class="btn" href="https://www.amazon.com/dp/B0H1SSRW1C" target="_blank" rel="noopener">
+        <span class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+        <span class="txt"><span class="label">My Timewave</span><span class="sub">My book on Amazon</span></span>
+        <span class="chev" aria-hidden="true">›</span>
+      </a>
+
+      <div class="btn-static" aria-label="Human: A Cosmic Traveller, coming soon">
+        <span class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg></span>
+        <span class="txt"><span class="label">Human: A Cosmic Traveller</span><span class="sub">Memoir by Cheera · coming soon</span></span>
+        <span class="badge">TBD</span>
+      </div>
+
+      <a class="btn" href="https://github.com/chiramdasu" target="_blank" rel="noopener">
+        <span class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="6" y1="3" x2="6" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg></span>
+        <span class="txt"><span class="label">GitHub</span><span class="sub">github.com/chiramdasu</span></span>
+        <span class="chev" aria-hidden="true">›</span>
+      </a>
+
+      <a class="btn" href="mailto:ichiramdas@gmail.com">
+        <span class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+        <span class="txt"><span class="label">Email</span><span class="sub">ichiramdas@gmail.com</span></span>
+        <span class="chev" aria-hidden="true">›</span>
+      </a>
+
+      <a class="btn" href="https://wa.me/17178770477" target="_blank" rel="noopener">
+        <span class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></span>
+        <span class="txt"><span class="label">WhatsApp</span><span class="sub">Message me</span></span>
+        <span class="chev" aria-hidden="true">›</span>
+      </a>
+
+      <a class="btn" href="tel:+17178770477">
+        <span class="disc"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+        <span class="txt"><span class="label">Call</span><span class="sub">(717) 877-0477</span></span>
+        <span class="chev" aria-hidden="true">›</span>
+      </a>
+    </nav>
+
+    <footer>
+      © Sreekanth Chiramdasu · Atlanta, GA<br>
+      <a href="https://chiramdasu.github.io/">chiramdasu.github.io</a>
+    </footer>
+  </div>
+</body>
+</html>
